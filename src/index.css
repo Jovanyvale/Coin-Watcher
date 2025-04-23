@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+    --color-dark-blue: #094872;
+    --color-white: #ffffff;
+    --color-gray: #b9b6b9;
+    --color-raisin-black: #372f36;
+    --color-soft-gray: #545454;
+    --color-light-gray: #c7c7c7;
+}
+
+html {
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #141414;
+}
