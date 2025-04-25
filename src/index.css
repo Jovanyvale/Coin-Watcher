@@ -14,22 +14,23 @@ html {
     font-weight: 400;
     font-style: normal;
     background-color: #141414;
-    background: #2c223d;
-    background: linear-gradient(180deg, rgba(44, 34, 61, 1) 0%, rgba(20, 20, 20, 1) 100%);
+    background: #1b1b1b;
+    background: linear-gradient(180deg, rgb(27, 21, 37) 0%, rgba(20, 20, 20, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: 1920px, 1920px;
 }
 
 .greenCard {
-    backdrop-filter: blur(15px) saturate(200%);
-    -webkit-backdrop-filter: blur(15px) saturate(200%);
-    background: linear-gradient(201deg, rgba(98, 255, 74, 0.4) 0%, rgba(189, 189, 189, 0.4) 100%);
+    backdrop-filter: blur(15px) saturate(100%);
+    -webkit-backdrop-filter: blur(15px) saturate(100%);
+    background: #ff5454;
+    background: linear-gradient(360deg, rgba(64, 182, 46) 0%, rgb(64, 182, 46, 0.15) 100%);
     border-radius: 12px;
-    border: 3px solid rgba(255, 255, 255, 0.225);
 }
 
 .redCard {
-    backdrop-filter: blur(15px) saturate(200%);
-    -webkit-backdrop-filter: blur(15px) saturate(200%);
-    background: linear-gradient(201deg, rgba(255, 84, 84, 0.4) 0%, rgba(189, 189, 189, 0.4) 100%);
+    backdrop-filter: blur(15px) saturate(100%);
+    -webkit-backdrop-filter: blur(15px) saturate(100%);
+    background: linear-gradient(360deg, rgba(255, 47, 47) 0%, rgba(255, 47, 47, 0.15) 100%);
     border-radius: 12px;
-    border: 3px solid rgba(255, 255, 255, 0.225);
 }

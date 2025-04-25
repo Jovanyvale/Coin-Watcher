@@ -13,5 +13,6 @@ export default function fortmatCurrency(amount: number) {
             minimumFractionDigits: 0,
             maximumFractionDigits: 8
         }).format(amount);
+        
     }
 }
