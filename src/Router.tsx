@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Header from "./views/Header"
-import Layout from "./layouts/layout"
+import Header from "./views/Home"
+import Layout from "./layouts/Layout"
 import Favorites from "./views/Favorites"
 
 export default function AppRouter() {

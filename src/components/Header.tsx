@@ -1,15 +1,12 @@
 import { useMemo } from "react"
 import { Link, NavLink, useLocation } from "react-router-dom"
-
 export default function Header() {
 
     const location = useLocation()
 
-    const isHome = useMemo(() => location.pathname, [location.pathname])
+    const isHome = useMemo(() => location.pathname === '/', [location.pathname])
 
-    console.log(isHome)
-
-    return (
+    return (<>
         <div className="bg-black flex lg:flex-row flex-col place-content-between py-8 px-28 items-center">
             <div className="flex flex-row gap-8">
                 <img className="max-w-24 drop-shadow-md" src="buy-crypto-svgrepo-com.svg" alt="Logo" />
@@ -23,5 +20,6 @@ export default function Header() {
                     to="/favorites">Favorites</NavLink>
             </div>
         </div>
+    </>
     )
 }
