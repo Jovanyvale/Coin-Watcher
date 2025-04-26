@@ -10,13 +10,13 @@ export default function CoinCard({ name, symbol, priceUsd }: CoinCardProps) {
 
     return (
         <>
-            <div className="flex items-center max-w-11/12 mx-auto gap-6">
-                <img src={`https://assets.coincap.io/assets/icons/${symbol.toLowerCase()}@2x.png`} className="rounded-full max-w-full" />
+            <div className="flex lg:flex-col items-center max-w-11/12 mx-auto gap-6">
+                <img src={`https://assets.coincap.io/assets/icons/${symbol.toLowerCase()}@2x.png`} className="rounded-full max-w-full h-20" />
 
-                <div>
-                    <p className="text-white text-2xl">{name}</p>
+                <div className="lg:place-items-center">
+                    <p className="text-white text-3xl">{name}</p>
                     <p className="text-white text-sm">{symbol}</p>
-                    <p className="text-white text-xl mt-2">{fortmatCurrency(Number(priceUsd))} USD</p>
+                    <p className="text-white text-2xl mt-2">{fortmatCurrency(Number(priceUsd))} USD</p>
                 </div>
             </div>
         </>

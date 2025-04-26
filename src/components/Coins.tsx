@@ -2,8 +2,6 @@ import { useSelector, useDispatch } from "react-redux"
 import { useEffect } from "react"
 import { fetchData } from "../state/dataSlice"
 import type { AppDispatch, RootState } from "../state/store"
-import fortmatCurrency from "../helpers/formatCurrency"
-import store from "../state/store"
 import CoinCard from "./CoinCard"
 
 export default function Coins() {
