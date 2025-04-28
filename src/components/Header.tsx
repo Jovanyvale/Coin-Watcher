@@ -1,10 +1,10 @@
-import { useMemo } from "react"
-import { Link, NavLink, useLocation } from "react-router-dom"
+//import { useMemo } from "react"
+import { NavLink } from "react-router-dom"
 export default function Header() {
 
-    const location = useLocation()
+    //const location = useLocation()
 
-    const isHome = useMemo(() => location.pathname === '/', [location.pathname])
+    //const isHome = useMemo(() => location.pathname === '/', [location.pathname])
 
     return (<>
         <div className="bg-black flex lg:flex-row flex-col place-content-between py-8 px-28 items-center">

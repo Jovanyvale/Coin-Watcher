@@ -32,14 +32,22 @@ export default function Coins() {
     }, [dispatch])
 
     const [selectedCoin, setSelectedCoin] = useState<selectedCoin | null>(null)
+    const [selectedFilter, setSelectedFilter] = useState("")
 
-    if (selectedCoin) {
-        document.body.classList.add("active-modal")
-        document.body.style.userSelect = "none"
-    } else {
-        document.body.classList.remove("active-modal")
-        document.body.style.userSelect = ""
-    }
+    useEffect(() => {
+        if (selectedCoin) {
+            document.body.classList.add("active-modal")
+            document.body.style.userSelect = "none"
+        } else {
+            document.body.classList.remove("active-modal")
+            document.body.style.userSelect = ""
+        }
+
+        return () => {
+            document.body.classList.remove("active-modal")
+            document.body.style.userSelect = ""
+        }
+    }, [selectedCoin])
 
     console.log(data.content)
 
@@ -58,7 +66,8 @@ export default function Coins() {
                 )}
 
                 {selectedCoin && (
-                        < CoinModal
+                    <div className="fixed inset-0 bg-black/50 z-2">
+                        <CoinModal
                             name={selectedCoin.name}
                             symbol={selectedCoin.symbol}
                             image={`https://assets.coincap.io/assets/icons/${selectedCoin.symbol.toLowerCase()}@2x.png`}
@@ -68,7 +77,7 @@ export default function Coins() {
                             changePercent24Hr={selectedCoin.changePercent24Hr}
                             priceUsd={selectedCoin.priceUsd}
                             onClose={() => setSelectedCoin(null)}
-                        />
+                        /></div>
                 )}
             </main >
 
