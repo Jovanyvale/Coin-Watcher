@@ -27,9 +27,9 @@ export default function Search() {
                         className="bg-light-gray rounded-2xl ml-1 px-3 outline-none w-full appearance-none">
                         <option value="sortRank">Rank</option>
                         <option value="sortName">Name</option>
-                        <option value="sortMarketCap">Market Cap</option>
-                        <option value="sort24h">24H Change High to Low</option>
-                        <option value="sort24h">24H Change Low to High</option>
+                        <option value="sortPrice">Price</option>
+                        <option value="sort24hHL">24H Change High to Low</option>
+                        <option value="sort24hLH">24H Change Low to High</option>
                     </select>
                 </div >
 
