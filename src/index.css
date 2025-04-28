@@ -7,6 +7,7 @@
     --color-raisin-black: #372f36;
     --color-soft-gray: #545454;
     --color-light-gray: #c7c7c7;
+
 }
 
 html {
@@ -33,4 +34,8 @@ html {
     -webkit-backdrop-filter: blur(15px) saturate(100%);
     background: linear-gradient(360deg, rgba(255, 47, 47) 0%, rgba(255, 47, 47, 0.15) 100%);
     border-radius: 12px;
+}
+
+.active-modal {
+    overflow-y: hidden;
 }

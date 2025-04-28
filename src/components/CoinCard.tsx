@@ -1,4 +1,4 @@
-import fortmatCurrency from "../helpers/formatCurrency"
+import formatCurrency from "../helpers/formatCurrency"
 
 interface CoinCardProps {
     name: string
@@ -16,7 +16,7 @@ export default function CoinCard({ name, symbol, priceUsd }: CoinCardProps) {
                 <div className="lg:place-items-center">
                     <p className="text-white text-3xl">{name}</p>
                     <p className="text-white text-sm">{symbol}</p>
-                    <p className="text-white text-2xl mt-2">{fortmatCurrency(Number(priceUsd))} USD</p>
+                    <p className="text-white text-2xl mt-2">{formatCurrency(Number(priceUsd))} USD</p>
                 </div>
             </div>
         </>

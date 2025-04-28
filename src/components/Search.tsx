@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { setSearchInput, setSortInput } from "../state/filtersSlice"
 
 export default function Search() {

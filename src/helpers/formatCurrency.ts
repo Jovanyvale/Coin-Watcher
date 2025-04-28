@@ -1,4 +1,4 @@
-export default function fortmatCurrency(amount: number) {
+export default function formatCurrency(amount: number) {
     if (amount >= 1) {
         return new Intl.NumberFormat('en-US', {
             style: 'currency',
@@ -13,6 +13,6 @@ export default function fortmatCurrency(amount: number) {
             minimumFractionDigits: 0,
             maximumFractionDigits: 8
         }).format(amount);
-        
+
     }
 }
