@@ -2,10 +2,6 @@
 import { NavLink } from "react-router-dom"
 export default function Header() {
 
-    //const location = useLocation()
-
-    //const isHome = useMemo(() => location.pathname === '/', [location.pathname])
-
     return (<>
         <div className="bg-black flex lg:flex-row flex-col place-content-between py-8 px-28 items-center">
             <div className="flex flex-row gap-8">

@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import dataReducer from "./dataSlice.ts"
 import filtersSlice from "./filtersSlice.ts"
+import favoritesSlice from "./favoritesSlice.ts"
 
 const store = configureStore({
     reducer: {
         data: dataReducer,
-        filter: filtersSlice
+        filter: filtersSlice,
+        favorites: favoritesSlice
     }
 })
 

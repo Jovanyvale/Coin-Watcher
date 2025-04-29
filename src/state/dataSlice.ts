@@ -8,8 +8,7 @@ export const fetchData = createAsyncThunk(
         return data.data
     }
 )
-
-export interface InitialState {
+interface InitialState {
     content: any[]
     loading: boolean
     error: string | undefined
@@ -24,7 +23,17 @@ const initialState: InitialState = {
 const dataSlice = createSlice({
     name: 'data',
     initialState,
-    reducers: {},
+    reducers: {
+        updatePrices: (state, action) => {
+            action.payload.forEach((newData: { id: string, priceUsd: string, changePercent24Hr: string }) => {
+                const coin = state.content.find(c => c.id === newData.id)
+                if (coin) {
+                    coin.priceUsd = newData.priceUsd
+                    coin.changePercent24Hr = newData.changePercent24Hr
+                }
+            })
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(fetchData.pending, (state) => {
@@ -41,3 +50,4 @@ const dataSlice = createSlice({
     }
 })
 export default dataSlice.reducer
+export const { updatePrices } = dataSlice.actions;

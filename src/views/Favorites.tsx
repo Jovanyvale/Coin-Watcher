@@ -1,6 +1,8 @@
+import Coins from "../components/Coins";
+
 export default function Favorites() {
 
     return (
-        <div>Hi</div>
+        <Coins />
     )
 }
